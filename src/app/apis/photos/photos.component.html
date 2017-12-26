@@ -1,0 +1,26 @@
+<div class='jumbotron'>
+  <p align="center">Photos</p>
+  <div class='container'>
+    <br>
+    <label>Select No of photo to display:</label>
+    <ng-select [items]="limits" (selected)="selected($event)"></ng-select>
+    <hr>
+  </div>
+  <div class='container-fluid'>
+    <div class="table">
+      <div class="row">
+        <div class="col-xs-6 col-sm-3" *ngFor="let photo of photos | paginate: 
+        { itemsPerPage: pagesize, currentPage: p,totalItems: total }">
+          <img [src]="photo.thumbnailUrl" (click)="show(photo.url)" />
+          <div class="container-fluid" *ngIf="event && (photo.url==event)">
+            <img [src]="event" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container well" align="center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

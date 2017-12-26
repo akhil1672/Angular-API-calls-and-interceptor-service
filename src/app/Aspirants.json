@@ -1,0 +1,86 @@
+[  
+    {  
+        "id":"1",
+        "name":"Akhil kamatala",
+        "branch":"CSE",
+        "college":"gurunanak"
+    },
+      
+        {"id": "2",
+        "name":"Anurag",
+        "branch":"CSE",
+         "college":"gurunanak"
+    },
+        {  
+        "id": "3",    
+        "name":"Ganesh",
+        "branch":"CSE",
+            "college":"gurunanak"
+    },
+        {  
+            "id": "4",
+        "name":"Pavitra",
+        "branch":"CSE",
+            "college":"gurunanak"
+    },
+        {  
+            "id": "5",
+        "name":"Soujanya",
+        "branch":"CSE",
+            "college":"gurunanak"
+    },
+        {
+            "id": "6",  
+        "name":"Ashish",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "7",
+        "name":"Nihal",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "8",
+        "name":"Sai kumar",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "9",
+        "name":"Skumar2",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "10",
+        "name":"Skumar3",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "11",
+        "name":"Dandi",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "12",
+        "name":"Anvesh",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "13",
+        "name":"Chaitanya",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    },
+        {  
+            "id": "14",
+        "name":"Vinay",
+        "branch":"CSE",
+            "college":"sreenidhi"
+    }
+]

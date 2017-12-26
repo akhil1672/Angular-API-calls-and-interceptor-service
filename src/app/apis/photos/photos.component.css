@@ -1,0 +1,17 @@
+.col-xs-6{
+    padding-top: 15px;
+}
+.container{
+    padding-top:10px;
+    width: 470px;
+}
+
+.container-fluid{
+    padding-top: 10px;
+}
+.well{
+    padding:10px
+}
+img{
+    cursor: pointer;
+}

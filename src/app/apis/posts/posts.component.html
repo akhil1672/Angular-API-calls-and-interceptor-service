@@ -1,0 +1,30 @@
+
+<h1 align="center">Search Posts of Users</h1>
+<div class="container well">
+  <label>UserID:</label>
+  <input #input type="text" placeholder="Enter User ID" />
+  <button  type="submit" class="btn btn-info" (click)="selectUserId(input.value)">Submit</button>
+</div> 
+
+<div class="jumbotron">
+  <h2>Posts details</h2>
+  <hr>
+  <div class="container" *ngIf="!selected" align="center">
+    <h2>No Posts to display</h2>
+  </div>
+  <div *ngIf="selected">
+  <div class="container well" style="background-color:rgba(111, 245, 238, 0.842)" *ngFor="let post of posts">
+    <h4>
+      <label>Post ID: </label> {{post.id}}
+      <br>
+      <label>Post Title: </label> {{post.title}}
+      <br>
+      <label>Post Body: </label> {{post.body}}
+      <br>
+      <label>Post UserID: </label> {{post.userId}}
+      <br>
+    </h4>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-success" (click)='return()'>Back to APIS</button>
+</div>

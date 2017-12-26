@@ -1,0 +1,28 @@
+<h1 align="center">
+  Sort Todo list
+</h1>
+<div class="container well">
+  <button type="submit" class="btn btn-danger" (click)="todosfunc(false)">False</button>
+  <button type="submit" class="btn btn-success" (click)="todosfunc(true)">True</button>
+</div>
+
+<div class="jumbotron">
+  <h2>Todo details</h2>
+  <hr>
+  <div class="container" *ngIf="!selected" align="center">
+    <h2>No Todos to display</h2>
+  </div>
+  <div *ngIf="selected">
+    <div class="container well" style="background-color:rgba(111, 245, 238, 0.842)" *ngFor="let todo of todos">
+      <h4>
+        <label>Todo ID: </label> {{todo.id}}
+        <br>
+        <label>Post Title: </label> {{todo.title}}
+        <br>
+        <label>Completed: </label> {{todo.completed}}
+        <br>
+      </h4>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success" (click)='return()'>Back to APIS</button>
+</div>

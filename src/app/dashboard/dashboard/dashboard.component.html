@@ -1,0 +1,79 @@
+<div class="container">
+  <h2>{{title}}</h2>
+  <hr>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-secondary" type="button">Search GuruNanak Students</button>
+        </span>
+        <input #input1 [(ngModel)]="name1" name="name1" (input)="search(input1.value)" type="text" 
+        class="form-control" placeholder="Enter to Search names...">
+      </div>
+    </div>
+  </div>
+  <br>
+  <table class="table table-bordered table-sm table-hover">
+    <thead class="thead-light"> 
+      <tr class="font-italic">
+        <th scope="col">IDno</th>
+        <th scope="col">Name</th>
+        <th scope="col">College</th>
+        <th scope="col">Branch</th>
+        <th scope="col">Date</th>
+        <th scope="col">Percentage</th>
+      </tr>
+    </thead>
+    <tbody *ngIf='gstudents'>
+      <tr *ngFor='let gstudent of gstudentsfiltered' [routerLink]="['/students',gstudent.id]">
+        <td>{{gstudent.id}}</td>
+        <td><a [routerLink]="['/students',gstudent.id]">{{gstudent.name|uppercase}}</a></td>
+        <td>{{gstudent.branch}}</td>
+        <td>{{gstudent.college|uppercase}}</td>
+        <td>{{gstudent.date|date}}</td>
+        <td><button type="button" (click)='showperct(gstudent.percentage,gstudent.name)'  class="btn btn-primary"
+          appButtoncolor percent={{gstudent.percentage}}
+           >{{gstudent.percentage|percentage}}</button></td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
+<hr>
+<div class='container'>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-secondary" type="button">Search Sreenidhi students</button>
+        </span>
+        <input [(ngModel)]="name2" name="name2" type="text" class="form-control" placeholder="Search names..." aria-label="Search names...">
+      </div>
+    </div>
+  </div>
+  <br>
+<table class="table table-bordered table-sm tab table-hover">
+  <thead class="thead-dark">
+    <tr class="font-light">
+      <th scope="col">IDno</th>
+      <th scope="col">Name</th>
+      <th scope="col">College</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Date</th>
+      <th scope="col">Percentage</th>
+    </tr>
+  </thead>
+  <tbody *ngIf='sstudents'>
+    <tr *ngFor='let sstudent of sstudents |pipesearch:name2' [routerLink]="['/students',sstudent.id]">
+      <td>{{sstudent.id}}</td>
+      <td><a [routerLink]="['/students',sstudent.id]">{{sstudent.name|uppercase}}</a></td>
+      <td>{{sstudent.branch}}</td>
+      <td>{{sstudent.college|uppercase}}</td>
+      <td>{{sstudent?.date|date}}</td>
+      <td>
+        <button type="button" appButtoncolor percent={{sstudent.percentage}} 
+        (click)='showperct(sstudent.percentage,sstudent.name)' class="btn btn-primary">{{sstudent?.percentage|percentage}}</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:40px"></span>
+  <h2>Student details</h2>
+  <div class="container well" style="background-color:rgba(111, 245, 238, 0.842)">
+    <h4>
+      <label>Student ID: </label> {{student?.id}}
+      <br>
+      <label>Student name: </label> {{student?.name}}
+      <br>
+      <label>Student college: </label> {{student?.college|uppercase}}
+      <br>
+      <label>Student percentage: </label> {{student?.percentage|percentage}}
+      <br>
+    </h4>
+  </div>
+<button type="submit" class="btn btn-success" (click)='return()'>Back to Students page</button>  
+</div>

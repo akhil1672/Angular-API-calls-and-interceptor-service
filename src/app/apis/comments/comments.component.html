@@ -1,0 +1,36 @@
+<h1 align="center">
+  Search Comments 
+</h1>
+<div class="container well">
+  <label>PostID:</label>
+  <input #input1 type="text" placeholder="Enter Post ID" required/>
+  <label>CommentID:</label>
+  <input #input2 type="text" placeholder="Enter Comment ID" required/>
+  <br>
+  <button type="submit" align="center" class="btn btn-info" (click)="commentfunc(input1.value,input2?.value)">Submit</button>
+</div>
+
+<div class="jumbotron">
+  <h2>Comment details</h2>
+  <hr>
+  <div class="container" *ngIf="!selected" align="center">
+    <h2>No Comments to display</h2>
+  </div>
+  <div *ngIf="selected">
+    <div class="container well" style="background-color:rgba(111, 245, 238, 0.842)" *ngFor="let comment of comments">
+      <h4>
+        <label>Post ID: </label> {{comment.postId}}
+        <br>
+        <label>Comment Id: </label> {{comment.id}}
+        <br>
+        <label>Name: </label> {{comment.name}}
+        <br>
+        <label>Email: </label> {{comment.email}}
+        <br>
+        <label>Body: </label> {{comment.body}}
+        <br>
+      </h4>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success" (click)='return()'>Back to APIS</button>
+</div>
